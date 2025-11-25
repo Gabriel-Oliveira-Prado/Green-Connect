@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Green Connect</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/configuracoes.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/Favicon.png">
+</head>
+<body>
+    <!-- Sidebar Esquerda -->
+    <aside class="sidebar-left offcanvas-lg offcanvas-start" tabindex="-1" id="sidebarMenu">
+        <div class="offcanvas-header d-lg-none">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasLabel">Green Connect</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Fechar Menu"></button>
+        </div>
+
+        <a class="logo-box text-decoration-none d-flex align-items-center justify-content-center mt-3 mb-4" href="dashboard.html" aria-label="Página Inicial Green Connect">
+            <img src="../img/Favicon.png" alt="Green Connect Logo" width="32" height="32" class="me-2" loading="lazy">
+            <span class="fw-bold fs-5">Green Connect</span>
+        </a>
+
+        <div class="offcanvas-body p-0">
+            <nav class="sidebar-nav" aria-label="Navegação Principal">
+                <div class="nav-section">
+                    <h6 class="nav-title">MENU PRINCIPAL</h6>
+                    <ul class="nav-list">
+                        <li><a href="dashboard.html" class="nav-link" aria-current="page"><i class="fas fa-chart-line" aria-hidden="true"></i> <span>Painel</span></a></li>
+                        <li><a href="RelatorioAmbiental.html" class="nav-link"><i class="fas fa-tree" aria-hidden="true"></i> <span>Relatório Ambiental</span></a></li>
+                        <li><a href="Mensagens.html" class="nav-link"><i class="fas fa-envelope" aria-hidden="true"></i> <span>Mensagens</span></a></li>
+                        <li><a href="Missões.html" class="nav-link"><i class="fas fa-tasks" aria-hidden="true"></i> <span>Missões</span></a></li>
+                        <li><a href="Recompensas.html" class="nav-link"><i class="fas fa-gift" aria-hidden="true"></i> <span>Recompensas</span></a></li>
+                        <li><a href="Pet.html" class="nav-link"><i class="fas fa-paw" aria-hidden="true"></i> <span>Pet</span></a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h6 class="nav-title">AMIGOS</h6>
+                    <ul class="nav-list friends-list">
+                        <li>
+                            <a href="#" class="nav-link">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg" alt="Avatar de João Miguel" class="avatar-sm p-1" loading="lazy">
+                                <span>João Miguel</span>
+                                <span class="status-dot online" aria-label="Online"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg" alt="Avatar de Pedro Canto" class="avatar-sm p-1" loading="lazy">
+                                <span>Pedro Canto</span>
+                                <span class="status-dot offline"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h6 class="nav-title">OPÇÕES</h6>
+                    <ul class="nav-list">
+                        <li><a href="Configuracoes.html" class="nav-link active" aria-current="page"><i class="fas fa-cog"></i> <span>Configurações</span></a></li>
+                        <li><a href="../../index.html" class="nav-link logout"><i class="fas fa-sign-out-alt"></i> <span>Sair</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Navbar Superior - Usando <header> para semântica -->
+        <header class="navbar navbar-light bg-white sticky-top shadow-sm">
+            <div class="container-fluid">
+                <!-- Toggler para mobile -->
+                <button class="navbar-toggler d-lg-none me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-label="Abrir Menu Principal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Busca e Ícones Direitos -->
+                <form class="search-box flex-grow-1 me-3" role="search">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="text" placeholder="Procurando algo específico?" aria-label="Campo de busca">
+                </form>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn-icon d-none d-sm-flex" title="Filtros" aria-label="Filtros"><i class="fas fa-filter" aria-hidden="true"></i></button>
+                    <button class="btn-icon" title="Notificações" aria-label="Notificações"><i class="fas fa-bell" aria-hidden="true"></i><span class="badge" aria-label="99 ou mais notificações não lidas">99+</span></button>
+                    <a href="#" class="d-lg-none profile-icon-link" aria-label="Ver Perfil">
+                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg" alt="Avatar do Usuário" class="profile-avatar-sm" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Conteúdo da Página de Configurações -->
+        <div class="page-content">
+            <div class="container-fluid">
+                <header class="settings-header">
+                    <h1 class="h2 fw-bold text-dark">Configurações da Conta</h1>
+                    <p class="text-muted">Gerencie suas informações pessoais, segurança e preferências.</p>
+                </header>
+
+                <div class="row">
+                    <div class="col-lg-3">
+                        <!-- Navegação em Abas Vertical -->
+                        <div class="nav flex-column nav-pills settings-nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <button class="nav-link active" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="true"><i class="fas fa-user me-2"></i>Perfil</button>
+                            <button class="nav-link" id="v-pills-security-tab" data-bs-toggle="pill" data-bs-target="#v-pills-security" type="button" role="tab" aria-controls="v-pills-security" aria-selected="false"><i class="fas fa-shield-alt me-2"></i>Segurança</button>
+                            <button class="nav-link" id="v-pills-notifications-tab" data-bs-toggle="pill" data-bs-target="#v-pills-notifications" type="button" role="tab" aria-controls="v-pills-notifications" aria-selected="false"><i class="fas fa-bell me-2"></i>Notificações</button>
+                            <button class="nav-link" id="v-pills-privacy-tab" data-bs-toggle="pill" data-bs-target="#v-pills-privacy" type="button" role="tab" aria-controls="v-pills-privacy" aria-selected="false"><i class="fas fa-lock me-2"></i>Privacidade</button>
+                            <button class="nav-link" id="v-pills-appearance-tab" data-bs-toggle="pill" data-bs-target="#v-pills-appearance" type="button" role="tab" aria-controls="v-pills-appearance" aria-selected="false"><i class="fas fa-palette me-2"></i>Aparência</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9">
+                        <!-- Conteúdo das Abas -->
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <!-- Aba de Perfil -->
+                            <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                <div class="settings-card">
+                                    <h5 class="card-title">Informações do Perfil</h5>
+                                    <form>
+                                        <div class="mb-4 text-center">
+                                            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg" alt="Avatar" class="profile-avatar-lg" id="avatarPreview">
+                                            <input type="file" id="avatarUpload" class="d-none">
+                                            <button type="button" class="btn btn-sm btn-outline-success mt-2" onclick="document.getElementById('avatarUpload').click();">Alterar Foto</button>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3"><label class="form-label">Nome</label><input type="text" class="form-control" value="Gabriel Oliveira"></div>
+                                            <div class="col-md-6 mb-3"><label class="form-label">Nome de Usuário</label><input type="text" class="form-control" value="@gabriel_oliveira"></div>
+                                        </div>
+                                        <div class="mb-3"><label class="form-label">Email</label><input type="email" class="form-control" value="gabriel.oliveira@example.com" readonly></div>
+                                        <div class="mb-3"><label class="form-label">Bio</label><textarea class="form-control" rows="3">Entusiasta de sustentabilidade e tecnologia.</textarea></div>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3"><label class="form-label">Localização</label><input type="text" class="form-control" placeholder="Sua cidade, estado"></div>
+                                            <div class="col-md-6 mb-3"><label class="form-label">Website</label><input type="url" class="form-control" placeholder="https://seusite.com"></div>
+                                        </div>
+                                        <button type="submit" class="btn btn-success w-100"><i class="fas fa-save me-2"></i>Salvar Alterações</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Aba de Segurança -->
+                            <div class="tab-pane fade" id="v-pills-security" role="tabpanel" aria-labelledby="v-pills-security-tab">
+                                <div class="settings-card">
+                                    <h5 class="card-title">Segurança</h5>
+                                    <form>
+                                        <div class="mb-3"><label class="form-label">Senha Atual</label><input type="password" class="form-control" placeholder="••••••••"></div>
+                                        <div class="mb-3"><label class="form-label">Nova Senha</label><input type="password" class="form-control" placeholder="••••••••"></div>
+                                        <div class="mb-4"><label class="form-label">Confirmar Nova Senha</label><input type="password" class="form-control" placeholder="••••••••"></div>
+                                        <button type="submit" class="btn btn-success w-100 mb-4">Alterar Senha</button>
+                                    </form>
+                                    <hr>
+                                    <h6 class="mt-4">Autenticação de Dois Fatores (2FA)</h6>
+                                    <div class="form-check form-switch fs-5 mb-4">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="2faSwitch">
+                                        <label class="form-check-label" for="2faSwitch">Ativar 2FA</label>
+                                    </div>
+                                    <hr>
+                                    <h6 class="mt-4">Sessões Ativas</h6>
+                                    <div class="active-session">
+                                        <i class="fas fa-desktop device-icon"></i>
+                                        <div class="session-details">
+                                            <strong>Windows 11, Chrome</strong>
+                                            <small>Localização: Recife, PE - Agora mesmo</small>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-danger">Desconectar</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Aba de Notificações -->
+                            <div class="tab-pane fade" id="v-pills-notifications" role="tabpanel" aria-labelledby="v-pills-notifications-tab">
+                                <div class="settings-card">
+                                    <h5 class="card-title">Preferências de Notificação</h5>
+                                    <p class="text-muted small">Selecione como você deseja ser notificado.</p>
+                                    <form>
+                                        <h6 class="mb-3">Notificações por Email</h6>
+                                        <div class="form-check form-switch mb-2"><input class="form-check-input" type="checkbox" id="email-news" checked><label class="form-check-label" for="email-news">Novidades e atualizações</label></div>
+                                        <div class="form-check form-switch mb-2"><input class="form-check-input" type="checkbox" id="email-missions" checked><label class="form-check-label" for="email-missions">Lembretes de missões</label></div>
+                                        <hr class="my-4">
+                                        <h6 class="mb-3">Notificações Push</h6>
+                                        <div class="form-check form-switch mb-2"><input class="form-check-input" type="checkbox" id="push-messages"><label class="form-check-label" for="push-messages">Novas mensagens</label></div>
+                                        <div class="form-check form-switch mb-2"><input class="form-check-input" type="checkbox" id="push-mentions" checked><label class="form-check-label" for="push-mentions">Menções e comentários</label></div>
+                                        <button type="submit" class="btn btn-success w-100 mt-4">Salvar Preferências</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Aba de Privacidade -->
+                            <div class="tab-pane fade" id="v-pills-privacy" role="tabpanel" aria-labelledby="v-pills-privacy-tab">
+                                <div class="settings-card">
+                                    <h5 class="card-title">Privacidade da Conta</h5>
+                                    <form>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="profile-public" checked>
+                                            <label class="form-check-label" for="profile-public">Perfil público</label>
+                                            <div class="form-text">Permitir que outros usuários vejam seu perfil e atividades.</div>
+                                        </div>
+                                        <div class="form-check form-switch mb-4">
+                                            <input class="form-check-input" type="checkbox" id="data-sharing">
+                                            <label class="form-check-label" for="data-sharing">Compartilhamento de dados com parceiros</label>
+                                            <div class="form-text">Permitir que usemos seus dados anônimos para relatórios de impacto.</div>
+                                        </div>
+                                        <button type="submit" class="btn btn-success w-100">Salvar Privacidade</button>
+                                    </form>
+                                    <hr class="my-4">
+                                    <h6 class="mt-4">Gerenciamento de Dados</h6>
+                                    <div class="data-management">
+                                        <button class="btn btn-outline-secondary"><i class="fas fa-download me-2"></i>Baixar seus dados</button>
+                                        <button class="btn btn-outline-danger"><i class="fas fa-trash-alt me-2"></i>Excluir sua conta</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Aba de Aparência -->
+                            <div class="tab-pane fade" id="v-pills-appearance" role="tabpanel" aria-labelledby="v-pills-appearance-tab">
+                                <div class="settings-card">
+                                    <h5 class="card-title">Aparência</h5>
+                                    <p class="text-muted small">Personalize a aparência da plataforma.</p>
+                                    <form>
+                                        <h6>Tema</h6>
+                                        <div class="row g-3 theme-selector">
+                                            <div class="col-md-4">
+                                                <label for="lightTheme" class="theme-option active">
+                                                    <input type="radio" name="theme" id="lightTheme" class="d-none" checked>
+                                                    <div class="theme-preview theme-light-preview"></div>
+                                                    <span>Claro</span>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="darkTheme" class="theme-option">
+                                                    <input type="radio" name="theme" id="darkTheme" class="d-none">
+                                                    <div class="theme-preview theme-dark-preview"></div>
+                                                    <span>Escuro</span>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="systemTheme" class="theme-option">
+                                                    <input type="radio" name="theme" id="systemTheme" class="d-none">
+                                                    <div class="theme-preview theme-system-preview"><i class="fas fa-desktop"></i></div>
+                                                    <span>Sistema</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-success w-100 mt-4">Salvar Aparência</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts Customizados -->
+    <script src="../js/configuracoes.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

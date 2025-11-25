@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Dashboard Cidadão - Green Connect</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/Green-Connect/assets/css/dashboard.css">
+
+</head>
+<body>
+    <!-- Sidebar Esquerda (Offcanvas) - Usando <aside> para conteúdo secundário -->
+    <aside class="sidebar-left offcanvas-lg offcanvas-start" tabindex="-1" id="sidebarMenu" aria-label="Menu Principal">
+        <div class="offcanvas-header d-lg-none">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasLabel">Green Connect</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Fechar Menu"></button>
+        </div>
+
+        <a class="logo-box text-decoration-none d-flex align-items-center justify-content-center mt-3 mb-4" href="#" aria-label="Página Inicial Green Connect">
+            <img src="../img/Favicon.png" alt="Green Connect Logo" width="32" height="32" class="me-2" loading="lazy">
+            <span class="fw-bold fs-5">Green Connect</span>
+        </a>
+
+        <div class="offcanvas-body p-0">
+            <nav class="sidebar-nav" aria-label="Navegação Principal">
+                <div class="nav-section">
+                    <h6 class="nav-title">MENU PRINCIPAL</h6>
+                    <ul class="nav-list">
+                        <li><a href="dashboard.html" class="nav-link active" aria-current="page"><i class="fas fa-chart-line" aria-hidden="true"></i> <span>Painel</span></a></li>
+                        <li><a href="RelatorioAmbiental.html" class="nav-link"><i class="fas fa-tree" aria-hidden="true"></i> <span>Relatório Ambiental</span></a></li>
+                        <li><a href="Mensagens.html" class="nav-link"><i class="fas fa-envelope" aria-hidden="true"></i> <span>Mensagens</span></a></li>
+                        <li><a href="Missões.html" class="nav-link"><i class="fas fa-tasks" aria-hidden="true"></i> <span>Missões</span></a></li>
+                        <li><a href="Recompensas.html" class="nav-link"><i class="fas fa-gift" aria-hidden="true"></i> <span>Recompensas</span></a></li>
+                        <li><a href="Pet.html" class="nav-link"><i class="fas fa-paw" aria-hidden="true"></i> <span>Pet</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h6 class="nav-title">AMIGOS</h6>
+                    <ul class="nav-list friends-list">
+                        <li>
+                            <a href="#" class="nav-link">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg" alt="Avatar de João Miguel" class="avatar-sm p-1" loading="lazy">
+                                <span>João Miguel</span>
+                                <span class="status-dot online" aria-label="Online"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg" alt="Avatar de Pedro Canto" class="avatar-sm p-1" loading="lazy">
+                                <span>Pedro Canto</span>
+                                <span class="status-dot offline" aria-label="Offline"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h6 class="nav-title">OPÇÕES</h6>
+                    <ul class="nav-list">
+                        <li><a href="Configuracoes.html" class="nav-link"><i class="fas fa-cog" aria-hidden="true"></i> <span>Configurações</span></a></li>
+                        <li><a href="../../index.html" class="nav-link logout"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> <span>Sair</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="navbar navbar-light bg-white sticky-top shadow-sm">
+            <div class="container-fluid">
+                <button class="navbar-toggler d-lg-none me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-label="Abrir Menu Principal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="search-box flex-grow-1 me-3" role="search">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="text" placeholder="Procurando algo específico?" aria-label="Campo de busca">
+                </form>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn-icon d-none d-sm-flex" title="Filtros" aria-label="Filtros"><i class="fas fa-filter" aria-hidden="true"></i></button>
+                    <button class="btn-icon" title="Notificações" aria-label="Notificações"><i class="fas fa-bell" aria-hidden="true"></i><span class="badge" aria-label="99 ou mais notificações não lidas">99+</span></button>
+                    <a href="#" class="d-lg-none profile-icon-link" aria-label="Ver Perfil">
+                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg" alt="Avatar do Usuário" class="profile-avatar-sm" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <a href="#" class="welcome-card text-decoration-none animate__animated animate__fadeInDown" role="button">
+                            <div class="welcome-content">
+                                <div class="welcome-text">
+                                    <span class="badge-label">GREEN CONNECT</span>
+                                    <h2>Conectando o Meio-Ambiente com o Bem-Estar da População</h2>
+                                    <p>Continue sua jornada sustentável e ajude a transformar sua cidade em um lugar mais verde!</p>
+                                </div>
+                                <div class="welcome-actions">
+                                    <button class="btn btn-light btn-sm">
+                                        <i class="fas fa-eye me-2" aria-hidden="true"></i>Ver conteúdo
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="welcome-decoration" aria-hidden="true">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                        </a>
+                        <section class="quick-stats row g-3" aria-labelledby="quick-stats-title">
+                            <h3 id="quick-stats-title" class="visually-hidden">Estatísticas Rápidas</h3>
+                            <div class="col-md-4">
+                                <a href="#" class="stat-card text-decoration-none animate__animated animate__fadeInUp" role="button">
+                                    <div class="stat-icon" aria-hidden="true">
+                                        <i class="fas fa-tree"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <h6>Árvores Plantadas</h6>
+                                        <p class="stat-value mb-0">2/8 Concluído</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="#" class="stat-card text-decoration-none animate__animated animate__fadeInUp animate__delay-1s" role="button">
+                                    <div class="stat-icon" aria-hidden="true">
+                                        <i class="fas fa-camera"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <h6>Árvores Fotografadas</h6>
+                                        <p class="stat-value mb-0">2/8 Concluído</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="#" class="stat-card text-decoration-none animate__animated animate__fadeInUp animate__delay-2s" role="button">
+                                    <div class="stat-icon" aria-hidden="true">
+                                        <i class="fas fa-leaf"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <h6>Mudas Plantadas</h6>
+                                        <p class="stat-value mb-0">2/8 Concluído</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Seção de Registro de Plantio -->
+                        <section class="planting-registration-section mt-4" aria-labelledby="planting-registration-title">
+                            <div class="card registration-card animate__animated animate__fadeInUp">
+                                <div class="card-body">
+                                    <div class="registration-header">
+                                        <div class="registration-icon">
+                                            <i class="fas fa-camera-retro"></i>
+                                        </div>
+                                        <div>
+                                            <h5 id="planting-registration-title" class="card-title">Registre um Novo Plantio</h5>
+                                            <p class="card-subtitle text-muted">Compartilhe sua conquista e ganhe <strong>+50 Caibora Coins</strong>!</p>
+                                        </div>
+                                    </div>
+                                    <form id="plantingForm" class="mt-3">
+                                        <div class="mb-3">
+                                            <label for="plant-title" class="form-label small fw-bold">Título do Registro</label>
+                                            <input type="text" class="form-control" id="plant-title" placeholder="Ex: Minha primeira árvore no parque" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label small fw-bold">Foto ou Vídeo do Plantio</label>
+                                            <div class="drop-zone" id="dropZone">
+                                                <!-- Estado inicial -->
+                                                <div class="drop-zone-prompt" id="dropZonePrompt">
+                                                    <i class="fas fa-cloud-upload-alt"></i>
+                                                    <p class="mb-2">Arraste e solte seu arquivo aqui</p>
+                                                    <span class="text-muted small">ou</span>
+                                                    <label for="fileInput" class="btn btn-success mt-2"><i class="fas fa-search me-2"></i>Procure o arquivo</label>
+                                                </div>
+                                                <!-- Pré-visualização do arquivo -->
+                                                <div class="drop-zone-preview" id="previewContainer"></div>
+                                            </div>
+                                            <input type="file" id="fileInput" class="d-none" accept="image/*,video/*" aria-label="Upload de arquivo">
+                                        </div>
+                                        <button type="submit" class="btn btn-success w-100 fw-bold" disabled><i class="fas fa-leaf me-2"></i>Registrar Plantio</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+
+                    <!-- Seção de Progresso -->
+                    <section class="progress-section" aria-labelledby="progress-section-title">
+                        <div class="section-header">
+                            <h3 id="progress-section-title">Seu Progresso</h3>
+                            <a href="#" class="link-view-all">Ver Conclusões <i class="fas fa-chevron-right ms-1" aria-hidden="true"></i></a>
+                        </div>
+
+                            <div class="progress-grid row g-3">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="progress-item animate__animated animate__fadeInLeft">
+                                <div class="progress-header">
+                                    <h6>Atividades em Andamento</h6>
+                                </div>
+                                <div class="progress-list">
+                                    <div class="progress-entry">
+                                        <div class="progress-info">
+                                            <span class="progress-label">Atividade 1</span>
+                                            <small class="text-muted">25/02/2025</small>
+                                        </div>
+                                        <span class="badge bg-success">150 Caiboras Coins</span>
+                                    </div>
+                                    <div class="progress-entry">
+                                        <div class="progress-info">
+                                            <span class="progress-label">Atividade 2</span>
+                                            <small class="text-muted">25/02/2025</small>
+                                        </div>
+                                        <span class="badge bg-success">200 Caiboras Coins</span>
+                                    </div>
+                                </div>
+                            </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="progress-item animate__animated animate__fadeInUp">
+                                <div class="progress-header">
+                                    <h6>Recomendações da Atividade</h6>
+                                </div>
+                                <div class="progress-list">
+                                    <div class="progress-entry">
+                                        <div class="progress-info">
+                                            <span class="progress-label">Use luvas de jardinagem</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-success" aria-label="Mostrar Dicas sobre luvas de jardinagem">Mostrar Dicas</button>
+                                    </div>
+                                    <div class="progress-entry">
+                                        <div class="progress-info">
+                                            <span class="progress-label">Plante em local com sol</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-success" aria-label="Mostrar Dicas sobre plantar em local com sol">Mostrar Dicas</button>
+                                    </div>
+                                </div>
+                            </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="progress-item animate__animated animate__fadeInRight">
+                                <div class="progress-header">
+                                    <h6>Dicas de Plantio</h6>
+                                </div>
+                                <div class="progress-list">
+                                    <div class="progress-entry">
+                                        <div class="progress-info">
+                                            <span class="progress-label">Como escolher a muda certa</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-success" aria-label="Mostrar Dicas sobre como escolher a muda certa">Mostrar Dicas</button>
+                                    </div>
+                                    <div class="progress-entry">
+                                        <div class="progress-info">
+                                            <span class="progress-label">Técnicas de rega eficiente</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-success" aria-label="Mostrar Dicas sobre técnicas de rega eficiente">Mostrar Dicas</button>
+                                    </div>
+                                </div>
+                            </div>
+                                </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar Direita - Usando <aside> para conteúdo secundário -->
+                    <aside class="col-lg-4 sidebar-right">
+                        <!-- Card de Perfil Aprimorado -->
+                        <div class="profile-card animate__animated animate__fadeInRight">
+                            <div class="profile-card-header">
+                                <div class="profile-avatar-wrapper">
+                                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg" alt="Avatar de Gabriel Oliveira" class="profile-avatar p-3" loading="lazy">
+                                    <span class="status-indicator online" aria-label="Status Online"></span>
+                                </div>
+                            </div>
+                            <div class="profile-card-body">
+                                <div class="profile-info">
+                                    <h5 class="profile-name">Gabriel Oliveira</h5>
+                                    <p class="profile-handle text-muted">@gabriel_oliveira</p>
+                                </div>
+                                <div class="profile-progress-wrapper">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <small class="text-muted">Próximo Nível</small>
+                                        <small class="text-muted profile-greeting">150 pts</small>
+                                    </div>
+                                    <div class="progress profile-progress" role="progressbar" aria-label="Progresso para o próximo nível" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-success" style="width: 60%">60%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-card-footer">
+                                <a href="#" class="btn-icon" title="Notificações" aria-label="Ver Notificações"><i class="fas fa-bell" aria-hidden="true"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary profile-action-btn flex-grow-1" aria-label="Enviar Mensagem"><i class="fas fa-envelope me-2" aria-hidden="true"></i><span>Mensagens</span></a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary profile-action-btn flex-grow-1" aria-label="Compartilhar Perfil"><i class="fas fa-share-alt me-2" aria-hidden="true"></i><span>Compartilhar</span></a>
+                            </div>
+                        </div>
+
+                    <!-- Gráfico de Progresso -->
+                    <div class="chart-card animate__animated animate__fadeInUp">
+                        <h6 class="chart-title">Seu Progresso Semanal</h6>
+                        <div class="chart-container" role="img" aria-label="Gráfico de barras mostrando o progresso semanal.">
+                            <div class="bar-chart">
+                                <div class="bar" style="height: 40%;" data-value="40" aria-label="Segunda-feira: 40% de progresso"></div>
+                                <div class="bar" style="height: 60%;" data-value="60" aria-label="Terça-feira: 60% de progresso"></div>
+                                <div class="bar" style="height: 80%;" data-value="80" aria-label="Quarta-feira: 80% de progresso"></div>
+                                <div class="bar" style="height: 50%;" data-value="50" aria-label="Quinta-feira: 50% de progresso"></div>
+                                <div class="bar" style="height: 90%;" data-value="90" aria-label="Sexta-feira: 90% de progresso"></div>
+                                <div class="bar" style="height: 70%;" data-value="70" aria-label="Sábado: 70% de progresso"></div>
+                                <div class="bar" style="height: 30%;" data-value="30" aria-label="Domingo: 30% de progresso"></div>
+                            </div>
+                        </div>
+                        <div class="chart-labels d-flex justify-content-around mt-2" aria-hidden="true">
+                            <small>Seg</small>
+                            <small>Ter</small>
+                            <small>Qua</small>
+                            <small>Qui</small>
+                            <small>Sex</small>
+                            <small>Sáb</small>
+                            <small>Dom</small>
+                        </div>
+                    </div>
+
+                    <!-- Sugestões -->
+                    <div class="suggestions-card animate__animated animate__fadeInUp">
+                        <div class="suggestions-header">
+                            <h6>Sugestões Para Você</h6>
+                            <a href="#" class="link-more" aria-label="Ver todas as sugestões"><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="suggestions-list">
+                            <div class="suggestion-item">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg" alt="Avatar de Jonathan Gualtiero" class="suggestion-avatar p-2" loading="lazy">
+                                <div class="suggestion-info">
+                                    <h6>Jonathan Gualtiero</h6>
+                                    <small class="text-muted">Seguir</small>
+                                </div>
+                                <button class="btn btn-sm btn-success" aria-label="Seguir Jonathan Gualtiero">Seguir</button>
+                            </div>
+                            <div class="suggestion-item">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg" alt="Avatar de Allysson Gualtiero" class="suggestion-avatar p-2" loading="lazy">
+                                <div class="suggestion-info">
+                                    <h6>Allysson Gualtiero</h6>
+                                    <small class="text-muted">Seguir</small>
+                                </div>
+                                <button class="btn btn-sm btn-success" aria-label="Seguir Allysson Gualtiero">Seguir</button>
+                            </div>
+                            <div class="suggestion-item">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg" alt="Avatar de Arthur Fernandes" class="suggestion-avatar p-2" loading="lazy">
+                                <div class="suggestion-info">
+                                    <h6>Arthur Fernandes</h6>
+                                    <small class="text-muted">Seguir</small>
+                                </div>
+                                <button class="btn btn-sm btn-success" aria-label="Seguir Arthur Fernandes">Seguir</button>
+                            </div>
+                            <div class="suggestion-item">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg" alt="Avatar de Carlos Henrique" class="suggestion-avatar p-2" loading="lazy">
+                                <div class="suggestion-info">
+                                    <h6>Carlos Henrique</h6>
+                                    <small class="text-muted">Seguir</small>
+                                </div>
+                                <button class="btn btn-sm btn-success" aria-label="Seguir Carlos Henrique">Seguir</button>
+                            </div>
+                            <div class="suggestion-item">
+                                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person-fill.svg" alt="Avatar de Julia Holanda" class="suggestion-avatar p-2" loading="lazy">
+                                <div class="suggestion-info">
+                                    <h6>Julia Holanda</h6>
+                                    <small class="text-muted">Seguir</small>
+                                </div>
+                                <button class="btn btn-sm btn-success" aria-label="Seguir Julia Holanda">Seguir</button>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-block btn-outline-success btn-sm mt-3" role="button">Ver Todos</a>
+                    </div>
+                </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS e Script Customizado -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

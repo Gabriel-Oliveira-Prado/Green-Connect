@@ -1,0 +1,198 @@
+/* ============================================
+   GREEN CONNECT - PET PAGE STYLES
+   ============================================ */
+
+.pet-header {
+    margin-bottom: 1.5rem;
+}
+
+/* Card principal onde o pet é exibido */
+.pet-showcase-card {
+    background-color: var(--branco);
+    border: 1px solid var(--cinza-medio);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* Ambiente do pet (fundo e imagem) */
+.pet-environment {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Proporção 16:9 */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--cinza-claro);
+    margin-bottom: 1.5rem;
+}
+
+.pet-background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pet-container {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pet-image {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
+    /* Adicionar animação de idle */
+    animation: idle-pet 4s ease-in-out infinite;
+}
+
+@keyframes idle-pet {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Barras de status (Felicidade, Fome, Energia) */
+.pet-status-bars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.status-item .form-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.status-item .progress {
+    border-radius: 20px;
+    background-color: var(--cinza-medio);
+}
+
+.status-item .progress-bar {
+    border-radius: 20px;
+}
+
+/* Sidebar do Pet (Ações e Inventário) */
+.pet-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pet-actions-card,
+.pet-inventory-card,
+.pet-earnings-card {
+    background-color: var(--branco);
+    border: 1px solid var(--cinza-medio);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.pet-actions-card .card-title,
+.pet-earnings-card .card-title,
+.pet-inventory-card .card-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para a nova seção de ganhos dentro do card principal */
+.pet-earnings-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    align-items: center;
+}
+
+.earning-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.earning-label {
+    font-size: 0.9rem;
+    color: var(--cinza-escuro);
+    display: flex;
+    align-items: center;
+}
+
+.earning-value {
+    font-weight: 600;
+}
+
+/* Grid do Inventário */
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 0.75rem;
+}
+
+.inventory-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--cinza-claro);
+    border: 1px dashed var(--cinza-medio);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.inventory-item:not(.empty):hover {
+    background-color: var(--cinza-medio);
+    border-color: var(--verde-medio);
+}
+
+.inventory-item.empty {
+    cursor: default;
+}
+
+.item-icon {
+    font-size: 1.75rem;
+    color: var(--verde-medio);
+}
+
+.item-count {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.1rem 0.4rem;
+    border-radius: 10px;
+    border: 1px solid var(--branco);
+}
+
+@media (max-width: 991.98px) {
+    .pet-container {
+        width: 40%;
+    }
+}

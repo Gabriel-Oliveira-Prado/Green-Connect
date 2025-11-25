@@ -1,0 +1,192 @@
+/* Cores do Projeto Green Connect */
+:root {
+    --cor-sucesso: #198754;
+    --cor-sucesso-claro: #e8f5e9;
+    --cor-fundo: #f8f9fa;
+    --cor-borda: #dee2e6;
+    --cor-perigo: #dc3545;
+    --cor-texto-secundario: #6c757d;
+    --cor-branco: #ffffff;
+}
+
+/* Cabeçalho da página de configurações */
+.settings-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+/* Navegação vertical */
+.settings-nav .nav-link {
+    color: #495057;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.settings-nav .nav-link i {
+    width: 20px; /* Alinha os ícones */
+}
+
+.settings-nav .nav-link:hover {
+    background-color: var(--cor-sucesso-claro);
+    color: var(--cor-sucesso);
+}
+
+.settings-nav .nav-link.active {
+    background-color: var(--cor-sucesso);
+    color: var(--cor-branco);
+}
+
+/* Card de conteúdo das configurações */
+.settings-card {
+    background-color: var(--cor-branco);
+    border-radius: 1rem; /* Aumentado para um visual mais suave */
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06); /* Sombra mais suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionada transição */
+}
+
+.settings-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* Sombra mais pronunciada no hover */
+}
+
+.settings-card .card-title {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0; /* Borda mais sutil */
+    color: var(--cor-texto-escuro); /* Garante a cor do texto do dashboard.css */
+}
+
+/* Avatar do perfil */
+.profile-avatar-lg {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--cor-sucesso-claro);
+    background-color: #e9ecef;
+}
+
+/* Alinhamento e estilo dos botões de formulário */
+.settings-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-card form .btn {
+    align-self: flex-end; /* Alinha o botão à direita */
+    min-width: 180px; /* Largura mínima para consistência */
+}
+
+/* Efeito de hover para botões de sucesso */
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 135, 84, 0.3);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--cor-perigo);
+}
+
+/* Switches */
+.form-switch .form-check-input {
+    width: 2.5em;
+    height: 1.25em;
+    cursor: pointer;
+}
+
+/* Seletor de tema */
+.theme-selector {
+    gap: 1rem;
+}
+
+.theme-option {
+    border: 2px solid var(--cor-borda);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+    position: relative;
+    display: flex; /* Adicionado para controle de layout interno */
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo */
+    height: 100%; /* Garante que todos os cards tenham a mesma altura */
+}
+
+.theme-option:hover,
+.theme-option.active {
+    border-color: var(--cor-sucesso);
+}
+
+.theme-option.active::after {
+    content: '\f058'; /* Ícone de check do Font Awesome */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: var(--cor-sucesso);
+    background-color: white;
+    border-radius: 50%;
+}
+
+.theme-preview {
+    height: 60px;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--cor-borda);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-light-preview { background-color: #f8f9fa; }
+.theme-dark-preview { background-color: #212529; }
+.theme-system-preview { background-color: #e9ecef; color: #495057; font-size: 1.5rem; }
+
+/* Sessões Ativas */
+.active-session {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--cor-fundo);
+    border-radius: 0.5rem;
+}
+
+.device-icon {
+    font-size: 1.5rem;
+    color: var(--cor-texto-secundario);
+}
+
+.session-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.session-details small {
+    color: var(--cor-texto-secundario);
+}
+
+/* Gerenciamento de Dados */
+.data-management {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.data-management .btn {
+    flex-grow: 1; /* Permite que os botões cresçam igualmente */
+}
+
+/* Responsividade */
+@media (max-width: 991.98px) {
+    .settings-nav { margin-bottom: 2rem; }
+}
