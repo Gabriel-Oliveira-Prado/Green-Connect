@@ -1,608 +1,1094 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green Connect - Plataforma de Sustentabilidade Urbana</title>
-    
+
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/GreenConnect.css">
+    <link rel="stylesheet" href="assets/css/GreenConnect.css" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/img/Favicon.png">
-</head>
-<body>
+    <link rel="icon" type="image/png" href="assets/img/Favicon.png" />
+  </head>
+  <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#inicio">
-                <img src="assets/img/Favicon.png" alt="Green Connect Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
-                Green Connect   
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#modulos">Módulos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#impacto">Impacto</a></li>
-                    <li class="nav-item">
-                        <a class="btn btn-success btn-sm ms-2" href="#" data-bs-toggle="modal" data-bs-target="#cadastroModal">Começar Agora</a>
-                    </li>
-                </ul>
-            </div>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio">
+          <img
+            src="assets/img/Favicon.png"
+            alt="Green Connect Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top me-2"
+          />
+          Green Connect
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#modulos">Módulos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#impacto">Impacto</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="btn btn-success btn-sm ms-2"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#cadastroModal"
+                >Começar Agora</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero-section py-5 py-md-6">
-        <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-6 animate__animated animate__fadeInLeft">
-                    <h1 class="display-4 fw-bold mb-4">
-                        <span class="text-success">Green Connect</span>: A Plataforma que Transforma Ações Sustentáveis em Recompensas Reais
-                    </h1>
-                    <p class="lead text-muted mb-4">
-                        Integre cidadãos, empresas e o poder público em um ecossistema gamificado de impacto ambiental urbano. Plante o futuro, ganhe recompensas e faça a diferença.
-                    </p>
-                    <div class="d-flex flex-column flex-sm-row gap-3 mb-4">
-                        <button class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#cadastroModal">
-                            <i class="fas fa-sprout me-2"></i>Comece a Plantar o Futuro
-                        </button>
-                        <a href="#sobre" class="btn btn-outline-success btn-lg">Saiba Mais</a>
-                    </div>
-                    <div class="row g-4">
-                        <div class="col-4">
-                            <h3 class="text-success fw-bold">200+</h3>
-                            <small class="text-muted">Usuários Conectados</small>
-                        </div>
-                        <div class="col-4">
-                            <h3 class="text-success fw-bold">350+</h3>
-                            <small class="text-muted">Árvores Plantadas</small>
-                        </div>
-                        <div class="col-4">
-                            <h3 class="text-success fw-bold">30+</h3>
-                            <small class="text-muted">Empresas Parceiras</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 animate__animated animate__fadeInRight">
-                    <!-- Card de Destaque no Hero -->
-                    <div class="hero-feature-card">
-                        <div class="d-flex align-items-center mb-4">
-                            <i class="fas fa-leaf fa-2x text-success me-3"></i>
-                            <div>
-                                <h5 class="mb-0 text-white">Missão da Semana</h5>
-                                <small class="text-white-50">Participe e ganhe recompensas!</small>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <h4 class="fw-bold text-white">Plante uma árvore nativa</h4>
-                            <p class="text-white-50">Ajude a reflorestar sua cidade e ganhe <span class="fw-bold text-success">150 Caibora Coins</span> e um item exclusivo para seu pet virtual.</p>
-                        </div>
-                        <div class="d-grid">
-                            <a href="#" class="btn btn-light">Ver Detalhes da Missão <i class="fas fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6 animate__animated animate__fadeInLeft">
+            <h1 class="display-4 fw-bold mb-4">
+              <span class="text-success">Green Connect</span>: A Plataforma que
+              Transforma Ações Sustentáveis em Recompensas Reais
+            </h1>
+            <p class="lead text-muted mb-4">
+              Integre cidadãos, empresas e o poder público em um ecossistema
+              gamificado de impacto ambiental urbano. Plante o futuro, ganhe
+              recompensas e faça a diferença.
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-3 mb-4">
+              <button
+                class="btn btn-success btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#cadastroModal"
+              >
+                <i class="fas fa-sprout me-2"></i>Comece a Plantar o Futuro
+              </button>
+              <a href="#sobre" class="btn btn-outline-success btn-lg"
+                >Saiba Mais</a
+              >
             </div>
+            <div class="row g-4">
+              <div class="col-4">
+                <h3 class="text-success fw-bold">200+</h3>
+                <small class="text-muted">Usuários Conectados</small>
+              </div>
+              <div class="col-4">
+                <h3 class="text-success fw-bold">350+</h3>
+                <small class="text-muted">Árvores Plantadas</small>
+              </div>
+              <div class="col-4">
+                <h3 class="text-success fw-bold">30+</h3>
+                <small class="text-muted">Empresas Parceiras</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 animate__animated animate__fadeInRight">
+            <!-- Card de Destaque no Hero -->
+            <div class="hero-feature-card">
+              <div class="d-flex align-items-center mb-4">
+                <i class="fas fa-leaf fa-2x text-success me-3"></i>
+                <div>
+                  <h5 class="mb-0 text-white">Missão da Semana</h5>
+                  <small class="text-white-50"
+                    >Participe e ganhe recompensas!</small
+                  >
+                </div>
+              </div>
+              <div class="mb-3">
+                <h4 class="fw-bold text-white">Plante uma árvore nativa</h4>
+                <p class="text-white-50">
+                  Ajude a reflorestar sua cidade e ganhe
+                  <span class="fw-bold text-success">150 Caibora Coins</span> e
+                  um item exclusivo para seu pet virtual.
+                </p>
+              </div>
+              <div class="d-grid">
+                <a href="#" class="btn btn-light"
+                  >Ver Detalhes da Missão <i class="fas fa-arrow-right ms-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="sobre" class="py-5 py-md-6 bg-white border-top">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3 animate-title">O que é o Green Connect?</h2>
-                <p class="lead text-muted">Uma plataforma tecnológica voltada à sustentabilidade urbana que une tecnologia, inovação e ação ambiental.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 animate__animated animate__fadeInUp">
-                    <div class="card h-100 shadow-sm hover-card">
-                        <div class="card-body d-flex flex-column text-center">
-                            <div class="icon-box mb-3 mx-auto">
-                                <i class="fas fa-bullseye fa-2x text-success"></i>
-                            </div>
-                            <h5 class="card-title fw-bold">Nossa Visão</h5>
-                            <p class="card-text text-muted">
-                                Criar uma rede digital colaborativa que une tecnologia e sustentabilidade, fortalecendo o engajamento coletivo na transformação urbana através de ações ambientais concretas e recompensadas.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-                    <div class="card h-100 shadow-sm hover-card">
-                        <div class="card-body d-flex flex-column text-center">
-                            <div class="icon-box mb-3 mx-auto">
-                                <i class="fas fa-lightbulb fa-2x text-success"></i>
-                            </div>
-                            <h5 class="card-title fw-bold">Nosso Propósito</h5>
-                            <p class="card-text text-muted">
-                                Incentivar práticas ecológicas como o plantio de árvores, reciclagem e uso consciente de recursos naturais, facilitando o compartilhamento de informações, eventos e projetos relacionados ao meio ambiente.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3 animate-title">
+            O que é o Green Connect?
+          </h2>
+          <p class="lead text-muted">
+            Uma plataforma tecnológica voltada à sustentabilidade urbana que une
+            tecnologia, inovação e ação ambiental.
+          </p>
         </div>
+        <div class="row g-4">
+          <div class="col-md-6 animate__animated animate__fadeInUp">
+            <div class="card h-100 shadow-sm hover-card">
+              <div class="card-body d-flex flex-column text-center">
+                <div class="icon-box mb-3 mx-auto">
+                  <i class="fas fa-bullseye fa-2x text-success"></i>
+                </div>
+                <h5 class="card-title fw-bold">Nossa Visão</h5>
+                <p class="card-text text-muted">
+                  Criar uma rede digital colaborativa que une tecnologia e
+                  sustentabilidade, fortalecendo o engajamento coletivo na
+                  transformação urbana através de ações ambientais concretas e
+                  recompensadas.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.2s"
+          >
+            <div class="card h-100 shadow-sm hover-card">
+              <div class="card-body d-flex flex-column text-center">
+                <div class="icon-box mb-3 mx-auto">
+                  <i class="fas fa-lightbulb fa-2x text-success"></i>
+                </div>
+                <h5 class="card-title fw-bold">Nosso Propósito</h5>
+                <p class="card-text text-muted">
+                  Incentivar práticas ecológicas como o plantio de árvores,
+                  reciclagem e uso consciente de recursos naturais, facilitando
+                  o compartilhamento de informações, eventos e projetos
+                  relacionados ao meio ambiente.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Modules Section -->
     <section id="modulos" class="py-5 py-md-6 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3 animate-title">Como Funciona</h2>
-                <p class="lead text-muted">Green Connect é estruturado em módulos que atendem às diferentes necessidades de cada público.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4 animate__animated animate__fadeInUp">
-                    <div class="card h-100 shadow-sm hover-card">
-                        <div class="card-body">
-                            <div class="icon-box mb-3">
-                                <i class="fas fa-leaf fa-2x text-success"></i>
-                            </div>
-                            <h5 class="card-title fw-bold">Cidadão</h5>
-                            <p class="card-text text-muted mb-3">
-                                Plante árvores, ganhe recompensas e acompanhe seu impacto ambiental com nosso sistema de gamificação.
-                            </p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Registro de Plantios</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Sistema de Recompensas</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Companheiro Virtual (Pet)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
-                    <div class="card h-100 shadow-sm hover-card">
-                        <div class="card-body">
-                            <div class="icon-box mb-3">
-                                <i class="fas fa-building fa-2x text-success"></i>
-                            </div>
-                            <h5 class="card-title fw-bold">Empresa</h5>
-                            <p class="card-text text-muted mb-3">
-                                Integre sua empresa ao ecossistema sustentável e crie missões para seus colaboradores.
-                            </p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Gestão de Empresas Parceiras</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Criação de Missões</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Relatórios ESG</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-                    <div class="card h-100 shadow-sm hover-card">
-                        <div class="card-body">
-                            <div class="icon-box mb-3">
-                                <i class="fas fa-chart-bar fa-2x text-success"></i>
-                            </div>
-                            <h5 class="card-title fw-bold">Governo</h5>
-                            <p class="card-text text-muted mb-3">
-                                Valide ações ambientais, gerencie usuários e empresas, e acompanhe métricas de sustentabilidade.
-                            </p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Validação de Plantios</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Gestão de Usuários</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Métricas Ambientais</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3 animate-title">Como Funciona</h2>
+          <p class="lead text-muted">
+            Green Connect é estruturado em módulos que atendem às diferentes
+            necessidades de cada público.
+          </p>
         </div>
+        <div class="row g-4">
+          <div class="col-md-4 animate__animated animate__fadeInUp">
+            <div class="card h-100 shadow-sm hover-card">
+              <div class="card-body">
+                <div class="icon-box mb-3">
+                  <i class="fas fa-leaf fa-2x text-success"></i>
+                </div>
+                <h5 class="card-title fw-bold">Cidadão</h5>
+                <p class="card-text text-muted mb-3">
+                  Plante árvores, ganhe recompensas e acompanhe seu impacto
+                  ambiental com nosso sistema de gamificação.
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i
+                    >Registro de Plantios
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i>Sistema
+                    de Recompensas
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle text-success me-2"></i
+                    >Companheiro Virtual (Pet)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.1s"
+          >
+            <div class="card h-100 shadow-sm hover-card">
+              <div class="card-body">
+                <div class="icon-box mb-3">
+                  <i class="fas fa-building fa-2x text-success"></i>
+                </div>
+                <h5 class="card-title fw-bold">Empresa</h5>
+                <p class="card-text text-muted mb-3">
+                  Integre sua empresa ao ecossistema sustentável e crie missões
+                  para seus colaboradores.
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i>Gestão
+                    de Empresas Parceiras
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i>Criação
+                    de Missões
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle text-success me-2"></i
+                    >Relatórios ESG
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.2s"
+          >
+            <div class="card h-100 shadow-sm hover-card">
+              <div class="card-body">
+                <div class="icon-box mb-3">
+                  <i class="fas fa-chart-bar fa-2x text-success"></i>
+                </div>
+                <h5 class="card-title fw-bold">Governo</h5>
+                <p class="card-text text-muted mb-3">
+                  Valide ações ambientais, gerencie usuários e empresas, e
+                  acompanhe métricas de sustentabilidade.
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i
+                    >Validação de Plantios
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i>Gestão
+                    de Usuários
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle text-success me-2"></i
+                    >Métricas Ambientais
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Gamification Section -->
     <section class="py-5 py-md-6 bg-white border-top border-bottom">
-        <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-6 animate__animated animate__fadeInLeft">
-                    <h2 class="display-5 fw-bold mb-4 animate-title">Seu Companheiro Virtual</h2>
-                    <p class="lead text-muted mb-4">
-                        Cada ação que você realiza contribui para o crescimento e evolução de um companheiro virtual único. Quanto mais você planta, recicla e se engaja, mais seu pet cresce e se transforma.
-                    </p>
-                    <ul class="list-unstyled">
-                        <li class="mb-3">
-                            <i class="fas fa-star text-success me-3 fa-lg"></i>
-                            <span>Ganhe pontos com cada ação ambiental</span>
-                        </li>
-                        <li class="mb-3">
-                            <i class="fas fa-arrow-up text-success me-3 fa-lg"></i>
-                            <span>Veja seu companheiro evoluir em tempo real</span>
-                        </li>
-                        <li class="mb-3">
-                            <i class="fas fa-gift text-success me-3 fa-lg"></i>
-                            <span>Desbloqueie recompensas exclusivas</span>
-                        </li>
-                        <li class="mb-3">
-                            <i class="fas fa-share-alt text-success me-3 fa-lg"></i>
-                            <span>Compartilhe seu progresso com a comunidade</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 animate__animated animate__fadeInRight">
-                    <div class="hero-image rounded-4 p-4 text-center" style="min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid var(--cinza-medio); background: linear-gradient(160deg, #f0f4f2 0%, #e8ebe5 100%);">
-                        <h4 class="fw-bold mb-4">Acompanhe a Evolução</h4>
-                        <div class="d-flex align-items-center justify-content-center w-100" style="max-width: 380px;">
-                            <!-- Botão Anterior -->
-                            <button class="carousel-control-prev position-relative" type="button" data-bs-target="#petCarousel" data-bs-slide="prev" style="width: auto; background: none; border: none;">
-                                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1) grayscale(100) brightness(0.6);"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-    
-                            <div id="petCarousel" class="carousel slide mx-3" data-bs-ride="carousel" style="max-width: 220px;">
-                                <div class="carousel-indicators" style="bottom: -40px;">
-                                    <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Evolução 1"></button>
-                                    <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="1" aria-label="Evolução 2"></button>
-                                    <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="2" aria-label="Evolução 3"></button>
-                                </div>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active"><img src="assets/img/CaiporaPet1.png" class="d-block w-100" alt="Evolução 1 do Mascote" loading="lazy" style="filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));"></div>
-                                    <div class="carousel-item"><img src="assets/img/CaiporaPet2.png" class="d-block w-100" alt="Evolução 2 do Mascote" loading="lazy" style="filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));"></div>
-                                    <div class="carousel-item"><img src="assets/img/CaiporaPet3.png" class="d-block w-100" alt="Evolução 3 do Mascote" loading="lazy" style="filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));"></div>
-                                </div>
-                            </div>
-    
-                            <!-- Botão Próximo -->
-                            <button class="carousel-control-next position-relative" type="button" data-bs-target="#petCarousel" data-bs-slide="next" style="width: auto; background: none; border: none;">
-                                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1) grayscale(100) brightness(0.6);"></span>
-                                <span class="visually-hidden">Próximo</span>
-                            </button>
-                        </div>
-                        <p class="text-muted mt-5 pt-3">Seu companheiro virtual evolui aqui!<br><small>Complete missões para vê-lo crescer.</small></p>
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6 animate__animated animate__fadeInLeft">
+            <h2 class="display-5 fw-bold mb-4 animate-title">
+              Seu Companheiro Virtual
+            </h2>
+            <p class="lead text-muted mb-4">
+              Cada ação que você realiza contribui para o crescimento e evolução
+              de um companheiro virtual único. Quanto mais você planta, recicla
+              e se engaja, mais seu pet cresce e se transforma.
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <i class="fas fa-star text-success me-3 fa-lg"></i>
+                <span>Ganhe pontos com cada ação ambiental</span>
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-arrow-up text-success me-3 fa-lg"></i>
+                <span>Veja seu companheiro evoluir em tempo real</span>
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-gift text-success me-3 fa-lg"></i>
+                <span>Desbloqueie recompensas exclusivas</span>
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-share-alt text-success me-3 fa-lg"></i>
+                <span>Compartilhe seu progresso com a comunidade</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 animate__animated animate__fadeInRight">
+            <div
+              class="hero-image rounded-4 p-4 text-center"
+              style="
+                min-height: 400px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid var(--cinza-medio);
+                background: linear-gradient(160deg, #f0f4f2 0%, #e8ebe5 100%);
+              "
+            >
+              <h4 class="fw-bold mb-4">Acompanhe a Evolução</h4>
+              <div
+                class="d-flex align-items-center justify-content-center w-100"
+                style="max-width: 380px"
+              >
+                <!-- Botão Anterior -->
+                <button
+                  class="carousel-control-prev position-relative"
+                  type="button"
+                  data-bs-target="#petCarousel"
+                  data-bs-slide="prev"
+                  style="width: auto; background: none; border: none"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                    style="filter: invert(1) grayscale(100) brightness(0.6)"
+                  ></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+
+                <div
+                  id="petCarousel"
+                  class="carousel slide mx-3"
+                  data-bs-ride="carousel"
+                  style="max-width: 220px"
+                >
+                  <div class="carousel-indicators" style="bottom: -40px">
+                    <button
+                      type="button"
+                      data-bs-target="#petCarousel"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Evolução 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#petCarousel"
+                      data-bs-slide-to="1"
+                      aria-label="Evolução 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#petCarousel"
+                      data-bs-slide-to="2"
+                      aria-label="Evolução 3"
+                    ></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="assets/img/CaiporaPet1.png"
+                        class="d-block w-100"
+                        alt="Evolução 1 do Mascote"
+                        loading="lazy"
+                        style="
+                          filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+                        "
+                      />
                     </div>
+                    <div class="carousel-item">
+                      <img
+                        src="assets/img/CaiporaPet2.png"
+                        class="d-block w-100"
+                        alt="Evolução 2 do Mascote"
+                        loading="lazy"
+                        style="
+                          filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+                        "
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="assets/img/CaiporaPet3.png"
+                        class="d-block w-100"
+                        alt="Evolução 3 do Mascote"
+                        loading="lazy"
+                        style="
+                          filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+                        "
+                      />
+                    </div>
+                  </div>
                 </div>
+
+                <!-- Botão Próximo -->
+                <button
+                  class="carousel-control-next position-relative"
+                  type="button"
+                  data-bs-target="#petCarousel"
+                  data-bs-slide="next"
+                  style="width: auto; background: none; border: none"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                    style="filter: invert(1) grayscale(100) brightness(0.6)"
+                  ></span>
+                  <span class="visually-hidden">Próximo</span>
+                </button>
+              </div>
+              <p class="text-muted mt-5 pt-3">
+                Seu companheiro virtual evolui aqui!<br /><small
+                  >Complete missões para vê-lo crescer.</small
+                >
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Impact Section -->
     <section id="impacto" class="py-5 py-md-6 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3 animate-title">Impacto Comprovado</h2>
-                <p class="lead text-muted">Veja como a comunidade Green Connect está transformando cidades em ambientes mais sustentáveis.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-3 col-sm-6 animate__animated animate__fadeInUp">
-                    <div class="card text-center shadow-sm hover-card">
-                        <div class="card-body">
-                            <i class="fas fa-leaf fa-2x text-success mb-3"></i>
-                            <h3 class="text-success fw-bold">50K+</h3>
-                            <p class="text-muted">Árvores Plantadas</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
-                    <div class="card text-center shadow-sm hover-card">
-                        <div class="card-body">
-                            <i class="fas fa-users fa-2x text-success mb-3"></i>
-                            <h3 class="text-success fw-bold">10K+</h3>
-                            <p class="text-muted">Cidadãos Engajados</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-                    <div class="card text-center shadow-sm hover-card">
-                        <div class="card-body">
-                            <i class="fas fa-building fa-2x text-success mb-3"></i>
-                            <h3 class="text-success fw-bold">15+</h3>
-                            <p class="text-muted">Empresas Parceiras</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
-                    <div class="card text-center shadow-sm hover-card">
-                        <div class="card-body">
-                            <i class="fas fa-chart-bar fa-2x text-success mb-3"></i>
-                            <h3 class="text-success fw-bold">100%</h3>
-                            <p class="text-muted">Impacto Verificado</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3 animate-title">
+            Impacto Comprovado
+          </h2>
+          <p class="lead text-muted">
+            Veja como a comunidade Green Connect está transformando cidades em
+            ambientes mais sustentáveis.
+          </p>
         </div>
+        <div class="row g-4">
+          <div class="col-md-3 col-sm-6 animate__animated animate__fadeInUp">
+            <div class="card text-center shadow-sm hover-card">
+              <div class="card-body">
+                <i class="fas fa-leaf fa-2x text-success mb-3"></i>
+                <h3 class="text-success fw-bold">50K+</h3>
+                <p class="text-muted">Árvores Plantadas</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-3 col-sm-6 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.1s"
+          >
+            <div class="card text-center shadow-sm hover-card">
+              <div class="card-body">
+                <i class="fas fa-users fa-2x text-success mb-3"></i>
+                <h3 class="text-success fw-bold">10K+</h3>
+                <p class="text-muted">Cidadãos Engajados</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-3 col-sm-6 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.2s"
+          >
+            <div class="card text-center shadow-sm hover-card">
+              <div class="card-body">
+                <i class="fas fa-building fa-2x text-success mb-3"></i>
+                <h3 class="text-success fw-bold">15+</h3>
+                <p class="text-muted">Empresas Parceiras</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-3 col-sm-6 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.3s"
+          >
+            <div class="card text-center shadow-sm hover-card">
+              <div class="card-body">
+                <i class="fas fa-chart-bar fa-2x text-success mb-3"></i>
+                <h3 class="text-success fw-bold">100%</h3>
+                <p class="text-muted">Impacto Verificado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
     <section class="py-5 py-md-6 bg-white border-top border-bottom">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3 animate-title">O que Dizem Sobre Nós</h2>
-                <p class="lead text-muted">Histórias reais de pessoas e empresas transformando o futuro.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4 animate__animated animate__fadeInUp">
-                    <div class="card h-100 testimonial-card">
-                        <div class="card-body">
-                            <i class="fas fa-quote-left testimonial-quote-icon"></i>
-                            <p class="card-text text-muted mb-3 fst-italic">
-                                "[Adicione depoimento aqui] - Exemplo: 'Plantei 10 árvores e já ganhei recompensas incríveis!'"
-                            </p>
-                            <div class="testimonial-author">
-                                <h6 class="fw-bold mb-0">João Silva</h6>
-                                <small class="text-success">Cidadão Engajado</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
-                    <div class="card h-100 testimonial-card">
-                        <div class="card-body">
-                            <i class="fas fa-quote-left testimonial-quote-icon"></i>
-                            <p class="card-text text-muted mb-3 fst-italic">
-                                "[Adicione depoimento aqui] - Exemplo: 'Green Connect transformou nosso programa de sustentabilidade.'"
-                            </p>
-                            <div class="testimonial-author">
-                                <h6 class="fw-bold mb-0">Empresa XYZ</h6>
-                                <small class="text-success">Parceira Corporativa</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-                    <div class="card h-100 testimonial-card">
-                        <div class="card-body">
-                            <i class="fas fa-quote-left testimonial-quote-icon"></i>
-                            <p class="card-text text-muted mb-3 fst-italic">
-                                "[Adicione depoimento aqui] - Exemplo: 'Conseguimos validar e acompanhar todas as ações ambientais da cidade.'"
-                            </p>
-                            <div class="testimonial-author">
-                                <h6 class="fw-bold mb-0">Prefeitura ABC</h6>
-                                <small class="text-success">Poder Público</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3 animate-title">
+            O que Dizem Sobre Nós
+          </h2>
+          <p class="lead text-muted">
+            Histórias reais de pessoas e empresas transformando o futuro.
+          </p>
         </div>
+        <div class="row g-4">
+          <div class="col-md-4 animate__animated animate__fadeInUp">
+            <div class="card h-100 testimonial-card">
+              <div class="card-body">
+                <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                <p class="card-text text-muted mb-3 fst-italic">
+                  "[Adicione depoimento aqui] - Exemplo: 'Plantei 10 árvores e
+                  já ganhei recompensas incríveis!'"
+                </p>
+                <div class="testimonial-author">
+                  <h6 class="fw-bold mb-0">João Silva</h6>
+                  <small class="text-success">Cidadão Engajado</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.1s"
+          >
+            <div class="card h-100 testimonial-card">
+              <div class="card-body">
+                <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                <p class="card-text text-muted mb-3 fst-italic">
+                  "[Adicione depoimento aqui] - Exemplo: 'Green Connect
+                  transformou nosso programa de sustentabilidade.'"
+                </p>
+                <div class="testimonial-author">
+                  <h6 class="fw-bold mb-0">Empresa XYZ</h6>
+                  <small class="text-success">Parceira Corporativa</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.2s"
+          >
+            <div class="card h-100 testimonial-card">
+              <div class="card-body">
+                <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                <p class="card-text text-muted mb-3 fst-italic">
+                  "[Adicione depoimento aqui] - Exemplo: 'Conseguimos validar e
+                  acompanhar todas as ações ambientais da cidade.'"
+                </p>
+                <div class="testimonial-author">
+                  <h6 class="fw-bold mb-0">Prefeitura ABC</h6>
+                  <small class="text-success">Poder Público</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- About Company Section -->
     <section class="py-5 py-md-6 bg-dark text-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3 text-white animate-title">Conheça o Green Connect</h2>
-                <p class="lead text-white-50">
-                    Somos uma equipe apaixonada por sustentabilidade e tecnologia, comprometida em criar soluções inovadoras que transformam ações ambientais em impacto real.
-                </p>
-            </div>
-            <div class="row g-4 mb-5">
-                <div class="col-md-4 animate__animated animate__fadeInUp">
-                    <div class="card bg-success-light border-light text-white h-100 rounded-4 shadow">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold text-white">Nossa Missão</h5>
-                            <p class="card-text text-white-50">
-                                Democratizar a sustentabilidade urbana através da tecnologia, tornando ações ambientais acessíveis, recompensadoras e engajantes para todos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
-                    <div class="card bg-success-light border-light text-white h-100 rounded-4 shadow">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold text-white">Nossa Visão</h5>
-                            <p class="card-text text-white-50">
-                                Criar cidades mais verdes e sustentáveis, onde cidadãos, empresas e governo trabalham juntos em um ecossistema colaborativo de impacto ambiental.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-                    <div class="card bg-success-light border-light text-white h-100 rounded-4 shadow">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold text-white">Nossos Valores</h5>
-                            <p class="card-text text-white-50">
-                                Sustentabilidade, inovação, transparência e inclusão. Acreditamos que juntos podemos fazer a diferença no planeta.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3 text-white animate-title">
+            Conheça o Green Connect
+          </h2>
+          <p class="lead text-white-50">
+            Somos uma equipe apaixonada por sustentabilidade e tecnologia,
+            comprometida em criar soluções inovadoras que transformam ações
+            ambientais em impacto real.
+          </p>
         </div>
+        <div class="row g-4 mb-5">
+          <div class="col-md-4 animate__animated animate__fadeInUp">
+            <div
+              class="card bg-success-light border-light text-white h-100 rounded-4 shadow"
+            >
+              <div class="card-body p-4">
+                <h5 class="card-title fw-bold text-white">Nossa Missão</h5>
+                <p class="card-text text-white-50">
+                  Democratizar a sustentabilidade urbana através da tecnologia,
+                  tornando ações ambientais acessíveis, recompensadoras e
+                  engajantes para todos.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.1s"
+          >
+            <div
+              class="card bg-success-light border-light text-white h-100 rounded-4 shadow"
+            >
+              <div class="card-body p-4">
+                <h5 class="card-title fw-bold text-white">Nossa Visão</h5>
+                <p class="card-text text-white-50">
+                  Criar cidades mais verdes e sustentáveis, onde cidadãos,
+                  empresas e governo trabalham juntos em um ecossistema
+                  colaborativo de impacto ambiental.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="card bg-success-light border-light text-white h-100 rounded-4 shadow"
+            >
+              <div class="card-body p-4">
+                <h5 class="card-title fw-bold text-white">Nossos Valores</h5>
+                <p class="card-text text-white-50">
+                  Sustentabilidade, inovação, transparência e inclusão.
+                  Acreditamos que juntos podemos fazer a diferença no planeta.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="aurora-container">
-            <div class="aurora aurora-1"></div>
-            <div class="aurora aurora-2"></div>
-        </div>
-        <div class="container footer-content">
-            <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5 class="footer-title">
-                        <a class="navbar-brand fw-bold" href="#inicio">
-                            <img src="assets/img/Favicon.png" alt="Green Connect Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
-                            Green Connect 
-                        </a>
-                    </h5>
-                    <p class="footer-text">Democratizando a sustentabilidade urbana através da tecnologia e da colaboração.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/Gabriel-Oliveira-Prado" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <h6 class="footer-subtitle">Navegação</h6>
-                    <ul class="footer-links">
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#sobre">O Projeto</a></li>
-                        <li><a href="#modulos">Módulos</a></li>
-                        <li><a href="#impacto">Impacto</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-4 mb-4">
-                    <h6 class="footer-subtitle">Recursos</h6>
-                    <ul class="footer-links">
-                        <li><a href="#">Documentação</a></li>
-                        <li><a href="#">Termos de Serviço</a></li>
-                        <li><a href="#">Privacidade</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-4">
-                    <h6 class="footer-subtitle">Contato</h6>
-                    <ul class="footer-links">
-                        <li class="d-flex align-items-center justify-content-center justify-content-lg-start">
-                            <i class="fas fa-envelope me-2"></i>
-                            <a href="mailto:Gabrieloliveira.prado@hotmail.com">Gabrieloliveira.prado@hotmail.com</a>
-                        </li>
-                        <li class="d-flex align-items-center justify-content-center justify-content-lg-start">
-                            <i class="fas fa-phone me-2"></i>
-                            <span>+55 81 8510-2009</span>
-                        </li>
-                        <li class="d-flex align-items-center justify-content-center justify-content-lg-start">
-                            <img src="https://img.icons8.com/color/24/brazil-circular.png" alt="Bandeira do Brasil" class="me-2" loading="lazy"/>
-                            Brasil
-                        </li>
-                    </ul>
-                </div>
+      <div class="aurora-container">
+        <div class="aurora aurora-1"></div>
+        <div class="aurora aurora-2"></div>
+      </div>
+      <div class="container footer-content">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h5 class="footer-title">
+              <a class="navbar-brand fw-bold" href="#inicio">
+                <img
+                  src="assets/img/Favicon.png"
+                  alt="Green Connect Logo"
+                  width="30"
+                  height="30"
+                  class="d-inline-block align-text-top me-2"
+                />
+                Green Connect
+              </a>
+            </h5>
+            <p class="footer-text">
+              Democratizando a sustentabilidade urbana através da tecnologia e
+              da colaboração.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://github.com/Gabriel-Oliveira-Prado"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                ><i class="fab fa-github"></i
+              ></a>
             </div>
-            <hr class="footer-divider">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="footer-copyright">&copy; 2025 Green Connect. Todos os direitos reservados.</p>
-                </div>
-            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4">
+            <h6 class="footer-subtitle">Navegação</h6>
+            <ul class="footer-links">
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#sobre">O Projeto</a></li>
+              <li><a href="#modulos">Módulos</a></li>
+              <li><a href="#impacto">Impacto</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 mb-4">
+            <h6 class="footer-subtitle">Recursos</h6>
+            <ul class="footer-links">
+              <li><a href="#">Documentação</a></li>
+              <li><a href="#">Termos de Serviço</a></li>
+              <li><a href="#">Privacidade</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h6 class="footer-subtitle">Contato</h6>
+            <ul class="footer-links">
+              <li
+                class="d-flex align-items-center justify-content-center justify-content-lg-start"
+              >
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:Gabrieloliveira.prado@hotmail.com"
+                  >Gabrieloliveira.prado@hotmail.com</a
+                >
+              </li>
+              <li
+                class="d-flex align-items-center justify-content-center justify-content-lg-start"
+              >
+                <i class="fas fa-phone me-2"></i>
+                <span>+55 81 8510-2009</span>
+              </li>
+              <li
+                class="d-flex align-items-center justify-content-center justify-content-lg-start"
+              >
+                <img
+                  src="https://img.icons8.com/color/24/brazil-circular.png"
+                  alt="Bandeira do Brasil"
+                  class="me-2"
+                  loading="lazy"
+                />
+                Brasil
+              </li>
+            </ul>
+          </div>
         </div>
+        <hr class="footer-divider" />
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="footer-copyright">
+              &copy; 2025 Green Connect. Todos os direitos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Cadastro Modal -->
     <div class="modal fade" id="cadastroModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title fw-bold d-flex align-items-center" id="modalTitle">
-                        <img src="assets/img/Favicon.png" alt="Green Connect Logo" width="24" height="24" class="me-2">
-                        <span>Acessar Plataforma</span>
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5
+              class="modal-title fw-bold d-flex align-items-center"
+              id="modalTitle"
+            >
+              <img
+                src="assets/img/Favicon.png"
+                alt="Green Connect Logo"
+                width="24"
+                height="24"
+                class="me-2"
+              />
+              <span>Acessar Plataforma</span>
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Login View -->
+            <div id="loginView">
+              <form id="loginForm">
+                <div class="mb-3">
+                  <label for="loginEmail" class="form-label fw-bold"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="loginEmail"
+                    placeholder="seu@email.com"
+                    required
+                  />
                 </div>
-                <div class="modal-body">
-                    <!-- Login View -->
-                    <div id="loginView">
-                        <form id="loginForm">
-                            <div class="mb-3">
-                                <label for="loginEmail" class="form-label fw-bold">Email</label>
-                                <input type="email" class="form-control" id="loginEmail" placeholder="seu@email.com" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="loginPassword" class="form-label fw-bold">Senha</label>
-                                <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="rememberMe">
-                                    <label class="form-check-label" for="rememberMe">Lembrar-me</label>
-                                </div>
-                                <a href="#" class="text-success small">Esqueceu a senha?</a>
-                            </div>
-                            <button type="submit" class="btn btn-success w-100 fw-bold"><i class="fas fa-sign-in-alt me-2"></i>Entrar</button>
-                        </form>
-                        <div class="d-flex align-items-center my-3">
-                            <hr class="flex-grow-1">
-                            <span class="px-2 text-muted small">OU</span>
-                            <hr class="flex-grow-1">
-                        </div>
-                        <div class="d-grid gap-2">
-                            <a href="#" class="btn btn-light border d-flex align-items-center justify-content-center btn-google">
-                                <svg class="me-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.64 9.20455C17.64 8.56636 17.5827 7.95273 17.4764 7.36364H9V10.845h4.84364C13.6377 12.0477 12.9127 13.0182 11.8445 13.6855V15.705h2.58364C15.9018 14.1873 17.0227 11.9432 17.64 9.20455Z" fill="#4285F4"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9 18C11.43 18 13.4673 17.1941 14.4282 15.705L11.8445 13.6855C11.0418 14.2218 10.11 14.5636 9 14.5636C6.96273 14.5636 5.24182 13.1536 4.66 11.3345H1.98v2.08864C3.00545 15.7664 5.79727 18 9 18Z" fill="#34A853"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4.66 11.3345C4.47636 10.8 4.36364 10.2164 4.36364 9.60001C4.36364 8.98365 4.47636 8.40001 4.66 7.86546V5.77683H1.98C1.37545 6.95728 1 8.24183 1 9.60001C1 10.9582 1.37545 12.2427 1.98 13.4232L4.66 11.3345Z" fill="#FBBC05"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9 4.63636C10.2182 4.63636 11.2573 5.08364 11.9 5.68909L14.4818 3.10909C13.4673 2.15545 11.43 1.63636 9 1.63636C5.79727 1.63636 3.00545 3.83364 1.98 6.22364L4.66 8.31227C5.24182 6.49318 6.96273 4.63636 9 4.63636Z" fill="#EA4335"></path></svg>
-                                Entrar com Google
-                            </a>
-                            <a href="#" class="btn btn-primary d-flex align-items-center justify-content-center btn-facebook">
-                                <svg class="me-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.3125 9.225C16.3125 4.86 12.915 1.4625 8.55 1.4625C4.185 1.4625 0.7875 4.86 0.7875 9.225C0.7875 13.14 3.7575 16.4025 7.5375 16.9875V11.1375H5.5575V9.225H7.5375V7.74C7.5375 5.7825 8.7075 4.725 10.44 4.725C11.25 4.725 12.0825 4.86 12.0825 4.86V6.57H11.07C10.08 6.57 9.8475 7.1775 9.8475 7.9875V9.225H11.97L11.6325 11.1375H9.8475V16.9875C13.6275 16.4025 16.3125 13.14 16.3125 9.225Z" fill="white"></path></svg>
-                                Entrar com Facebook
-                            </a>
-                        </div>
-                        <p class="text-center text-muted small mt-3">
-                            Não tem uma conta? <a href="#" class="text-success fw-bold" id="switchToRegister">Crie uma agora</a>
-                        </p>
+                <div class="mb-3">
+                  <label for="loginPassword" class="form-label fw-bold"
+                    >Senha</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="loginPassword"
+                    placeholder="••••••••"
+                    required
+                  />
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="rememberMe"
+                    />
+                    <label class="form-check-label" for="rememberMe"
+                      >Lembrar-me</label
+                    >
+                  </div>
+                  <a href="#" class="text-success small">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="btn btn-success w-100 fw-bold">
+                  <i class="fas fa-sign-in-alt me-2"></i>Entrar
+                </button>
+              </form>
+              <div class="d-flex align-items-center my-3">
+                <hr class="flex-grow-1" />
+                <span class="px-2 text-muted small">OU</span>
+                <hr class="flex-grow-1" />
+              </div>
+              <div class="d-grid gap-2">
+                <a
+                  href="#"
+                  class="btn btn-light border d-flex align-items-center justify-content-center btn-google"
+                >
+                  <svg
+                    class="me-2"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.64 9.20455C17.64 8.56636 17.5827 7.95273 17.4764 7.36364H9V10.845h4.84364C13.6377 12.0477 12.9127 13.0182 11.8445 13.6855V15.705h2.58364C15.9018 14.1873 17.0227 11.9432 17.64 9.20455Z"
+                      fill="#4285F4"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9 18C11.43 18 13.4673 17.1941 14.4282 15.705L11.8445 13.6855C11.0418 14.2218 10.11 14.5636 9 14.5636C6.96273 14.5636 5.24182 13.1536 4.66 11.3345H1.98v2.08864C3.00545 15.7664 5.79727 18 9 18Z"
+                      fill="#34A853"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.66 11.3345C4.47636 10.8 4.36364 10.2164 4.36364 9.60001C4.36364 8.98365 4.47636 8.40001 4.66 7.86546V5.77683H1.98C1.37545 6.95728 1 8.24183 1 9.60001C1 10.9582 1.37545 12.2427 1.98 13.4232L4.66 11.3345Z"
+                      fill="#FBBC05"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9 4.63636C10.2182 4.63636 11.2573 5.08364 11.9 5.68909L14.4818 3.10909C13.4673 2.15545 11.43 1.63636 9 1.63636C5.79727 1.63636 3.00545 3.83364 1.98 6.22364L4.66 8.31227C5.24182 6.49318 6.96273 4.63636 9 4.63636Z"
+                      fill="#EA4335"
+                    ></path>
+                  </svg>
+                  Entrar com Google
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-primary d-flex align-items-center justify-content-center btn-facebook"
+                >
+                  <svg
+                    class="me-2"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.3125 9.225C16.3125 4.86 12.915 1.4625 8.55 1.4625C4.185 1.4625 0.7875 4.86 0.7875 9.225C0.7875 13.14 3.7575 16.4025 7.5375 16.9875V11.1375H5.5575V9.225H7.5375V7.74C7.5375 5.7825 8.7075 4.725 10.44 4.725C11.25 4.725 12.0825 4.86 12.0825 4.86V6.57H11.07C10.08 6.57 9.8475 7.1775 9.8475 7.9875V9.225H11.97L11.6325 11.1375H9.8475V16.9875C13.6275 16.4025 16.3125 13.14 16.3125 9.225Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                  Entrar com Facebook
+                </a>
+              </div>
+              <p class="text-center text-muted small mt-3">
+                Não tem uma conta?
+                <a href="#" class="text-success fw-bold" id="switchToRegister"
+                  >Crie uma agora</a
+                >
+              </p>
+            </div>
+
+            <!-- Register View -->
+            <div id="registerView" class="d-none">
+              <ul
+                class="nav nav-tabs nav-fill mb-3"
+                id="registerTab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="user-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#user-panel"
+                    type="button"
+                    role="tab"
+                    form="registerUserForm"
+                  >
+                    <i class="fas fa-user me-1"></i>Pessoa Física
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="company-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#company-panel"
+                    type="button"
+                    role="tab"
+                    form="registerCompanyForm"
+                  >
+                    <i class="fas fa-building me-1"></i>Pessoa Jurídica
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="registerTabContent">
+                <!-- Pessoa Física Panel -->
+                <div
+                  class="tab-pane fade show active"
+                  id="user-panel"
+                  role="tabpanel"
+                >
+                  <form id="registerUserForm">
+                    <div class="mb-3">
+                      <label for="registerName" class="form-label fw-bold"
+                        >Nome Completo</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="registerName"
+                        placeholder="Seu nome completo"
+                        required
+                      />
                     </div>
 
-                    <!-- Register View -->
-                    <div id="registerView" class="d-none">
-                        <ul class="nav nav-tabs nav-fill mb-3" id="registerTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="user-tab" data-bs-toggle="tab" data-bs-target="#user-panel" type="button" role="tab">
-                                    <i class="fas fa-user me-1"></i>Pessoa Física
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="company-tab" data-bs-toggle="tab" data-bs-target="#company-panel" type="button" role="tab">
-                                    <i class="fas fa-building me-1"></i>Pessoa Jurídica
-                                </button>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="registerTabContent">
-                            <!-- Pessoa Física Panel -->
-                            <div class="tab-pane fade show active" id="user-panel" role="tabpanel">
-                                <form id="registerUserForm">
-                                    <div class="mb-3">
-                                        <label for="registerName" class="form-label fw-bold">Nome Completo</label>
-                                        <input type="text" class="form-control" id="registerName" placeholder="Seu nome completo" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="registerUserEmail" class="form-label fw-bold">Email</label>
-                                        <input type="email" class="form-control" id="registerUserEmail" placeholder="seu@email.com" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="registerUserPassword" class="form-label fw-bold">Senha</label>
-                                        <input type="password" class="form-control" id="registerUserPassword" placeholder="Crie uma senha forte" required>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- Pessoa Jurídica Panel -->
-                            <div class="tab-pane fade" id="company-panel" role="tabpanel">
-                                <form id="registerCompanyForm">
-                                    <div class="mb-3">
-                                        <label for="companyName" class="form-label fw-bold">Razão Social</label>
-                                        <input type="text" class="form-control" id="companyName" placeholder="Nome da sua empresa" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="registerCNPJ" class="form-label fw-bold">CNPJ</label>
-                                        <input type="text" class="form-control" id="registerCNPJ" placeholder="00.000.000/0000-00" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="registerCompanyEmail" class="form-label fw-bold">Email Comercial</label>
-                                        <input type="email" class="form-control" id="registerCompanyEmail" placeholder="contato@suaempresa.com" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="registerCompanyPassword" class="form-label fw-bold">Senha</label>
-                                        <input type="password" class="form-control" id="registerCompanyPassword" placeholder="Crie uma senha forte" required>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="form-check my-3">
-                            <input class="form-check-input" type="checkbox" id="agreeTerms" required>
-                            <label class="form-check-label" for="agreeTerms">
-                                Concordo com os <a href="#" class="text-success">Termos de Serviço</a>
-                            </label>
-                        </div>
-                        <button type="submit" form="registerUserForm" class="btn btn-success w-100 fw-bold">
-                            <i class="fas fa-user-plus me-2"></i>Criar Conta
-                        </button>
-                        <p class="text-center text-muted small mt-3">
-                            Já tem uma conta? <a href="#" class="text-success fw-bold" id="switchToLogin">Faça Login</a>
-                        </p>
+                    <div class="mb-3">
+                      <label for="registerUserName" class="form-label fw-bold"
+                        >Defina seu nome de usuário</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="registerUserName"
+                        placeholder="Seu nome de usuário"
+                        required
+                      />
                     </div>
+                    <div class="mb-3">
+                      <label for="registerUserEmail" class="form-label fw-bold"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="registerUserEmail"
+                        placeholder="seu@email.com"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label
+                        for="registerUserPassword"
+                        class="form-label fw-bold"
+                        >Senha</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="registerUserPassword"
+                        placeholder="Crie uma senha forte"
+                        required
+                      />
+                    </div>
+                    <input type="hidden" name="tipo" value="fisica" />
+                  </form>
                 </div>
+                <!-- Pessoa Jurídica Panel -->
+                <div class="tab-pane fade" id="company-panel" role="tabpanel">
+                  <form id="registerCompanyForm">
+                    <div class="mb-3">
+                      <label for="companyName" class="form-label fw-bold"
+                        >Razão Social</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="companyName"
+                        placeholder="Nome da sua empresa"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerCNPJ" class="form-label fw-bold"
+                        >CNPJ</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="registerCNPJ"
+                        placeholder="00.000.000/0000-00"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label
+                        for="registerCompanyEmail"
+                        class="form-label fw-bold"
+                        >Email Comercial</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="registerCompanyEmail"
+                        placeholder="contato@suaempresa.com"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label
+                        for="registerCompanyPassword"
+                        class="form-label fw-bold"
+                        >Senha</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="registerCompanyPassword"
+                        placeholder="Crie uma senha forte"
+                        required
+                      />
+                    </div>
+                    <input type="hidden" name="tipo" value="fisica" />
+                  </form>
+                </div>
+              </div>
+              <div class="form-check my-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="agreeTerms"
+                  required
+                />
+                <label class="form-check-label" for="agreeTerms">
+                  Concordo com os
+                  <a href="#" class="text-success">Termos de Serviço</a>
+                </label>
+              </div>
+              <button
+                type="submit"
+                form="registerUserForm"
+                class="btn btn-success w-100 fw-bold"
+              >
+                <i class="fas fa-user-plus me-2"></i>Criar Conta
+              </button>
+              <p class="text-center text-muted small mt-3">
+                Já tem uma conta?
+                <a href="#" class="text-success fw-bold" id="switchToLogin"
+                  >Faça Login</a
+                >
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Bootstrap JS -->
@@ -612,19 +1098,24 @@
     <script src="assets/js/GreenConnect.js"></script>
 
     <script>
-        let lastScrollTop = 0;
-        const navbar = document.querySelector('.navbar');
+      let lastScrollTop = 0;
+      const navbar = document.querySelector(".navbar");
 
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      window.addEventListener(
+        "scroll",
+        function () {
+          const scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
 
-            if (scrollTop > lastScrollTop) {
-                navbar.style.top = '-100px';
-            } else {
-                navbar.style.top = '0';
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        }, false);
+          if (scrollTop > lastScrollTop) {
+            navbar.style.top = "-100px";
+          } else {
+            navbar.style.top = "0";
+          }
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        },
+        false
+      );
     </script>
-</body>
+  </body>
 </html>
