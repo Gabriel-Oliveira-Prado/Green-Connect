@@ -67,43 +67,127 @@ function initializeAnimations() {
 // ============================================
 
 function initializeFormValidation() {
-    // const form = document.getElementById('cadastroForm'); // Comentado pois o form original foi removido
-    
-    // if (form) {
-    //     form.addEventListener('submit', function(e) {
-    //         e.preventDefault();
-            
-    //         // Validar campos
-    //         const nome = document.getElementById('nome').value.trim();
-    //         const email = document.getElementById('email').value.trim();
-    //         const perfil = document.getElementById('perfil').value;
-    //         const termos = document.getElementById('termos').checked;
-            
-    //         // Validações
-    //         if (!nome) {
-    //             mostrarAlerta('Por favor, insira seu nome.', 'warning');
-    //             return;
-    //         }
-            
-    //         if (!validarEmail(email)) {
-    //             mostrarAlerta('Por favor, insira um email válido.', 'warning');
-    //             return;
-    //         }
-            
-    //         if (!perfil) {
-    //             mostrarAlerta('Por favor, selecione um perfil.', 'warning');
-    //             return;
-    //         }
-            
-    //         if (!termos) {
-    //             mostrarAlerta('Por favor, aceite os termos de serviço.', 'warning');
-    //             return;
-    //         }
-            
-    //         // Se passou em todas as validações
-    //         submeterFormulario(nome, email, perfil);
-    //     });
-    // }
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            const formData = new FormData();
+            formData.append('email', email);
+            formData.append('password', password);
+
+            fetch('php/login.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = 'assets/View/dashboard.html';
+                } else {
+                    mostrarAlerta(data.message || 'Erro no login.', 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                mostrarAlerta('Ocorreu um erro. Tente novamente.', 'danger');
+            });
+        });
+    }
+
+    const registerUserForm = document.getElementById('registerUserForm');
+    if(registerUserForm) {
+        registerUserForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nome = document.getElementById('registerName').value;
+            const username = document.getElementById('registerUserName').value;
+            const email = document.getElementById('registerUserEmail').value;
+            const password = document.getElementById('registerUserPassword').value;
+            const tipo = 'fisica';
+
+            const formData = new FormData();
+            formData.append('nome', nome);
+            formData.append('username', username);
+            formData.append('email', email);
+            formData.append('password', password);
+            formData.append('tipo', tipo);
+
+            fetch('php/register.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    if (data.redirect) {
+                        window.location.href = data.redirect;
+                    } else {
+                        mostrarAlerta('Cadastro realizado com sucesso! Você será redirecionado para o login.', 'success');
+                        setTimeout(() => {
+                            const switchToLogin = document.getElementById('switchToLogin');
+                            if(switchToLogin) {
+                                switchToLogin.click();
+                            }
+                        }, 2000);
+                    }
+                } else {
+                    mostrarAlerta(data.message || 'Erro no cadastro.', 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                mostrarAlerta('Ocorreu um erro. Tente novamente.', 'danger');
+            });
+        });
+    }
+
+    const registerCompanyForm = document.getElementById('registerCompanyForm');
+    if(registerCompanyForm) {
+        registerCompanyForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const razaoSocial = document.getElementById('companyName').value;
+            const cnpj = document.getElementById('registerCNPJ').value;
+            const email = document.getElementById('registerCompanyEmail').value;
+            const password = document.getElementById('registerCompanyPassword').value;
+            const tipo = 'juridica';
+
+            const formData = new FormData();
+            formData.append('razao_social', razaoSocial);
+            formData.append('cnpj', cnpj);
+            formData.append('email', email);
+            formData.append('password', password);
+            formData.append('tipo', tipo);
+
+            fetch('php/register.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    if (data.redirect) {
+                        window.location.href = data.redirect;
+                    } else {
+                        mostrarAlerta('Cadastro realizado com sucesso! Você será redirecionado para o login.', 'success');
+                        setTimeout(() => {
+                            const switchToLogin = document.getElementById('switchToLogin');
+                            if(switchToLogin) {
+                                switchToLogin.click();
+                            }
+                        }, 2000);
+                    }
+                } else {
+                    mostrarAlerta(data.message || 'Erro no cadastro.', 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                mostrarAlerta('Ocorreu um erro. Tente novamente.', 'danger');
+            });
+        });
+    }
 }
 
 // Validar email
@@ -277,6 +361,9 @@ function initializeModalToggles() {
     const switchToLogin = document.getElementById('switchToLogin');
     const modalTitle = document.getElementById('modalTitle');
     const modalTitleSpan = modalTitle.querySelector('span');
+    const userTab = document.getElementById('user-tab');
+    const companyTab = document.getElementById('company-tab');
+    const registerSubmitButton = document.getElementById('registerSubmitButton');
 
     if (switchToRegister) {
         switchToRegister.addEventListener('click', (e) => {
@@ -295,6 +382,20 @@ function initializeModalToggles() {
             loginView.classList.remove('d-none');
             modalTitle.querySelector('img').style.display = 'inline-block';
             modalTitleSpan.textContent = 'Acessar Plataforma';
+        });
+    }
+
+    if (userTab) {
+        userTab.addEventListener('click', () => {
+            registerSubmitButton.setAttribute('form', 'registerUserForm');
+            registerSubmitButton.innerHTML = '<i class="fas fa-user-plus me-2"></i>Criar Conta';
+        });
+    }
+
+    if (companyTab) {
+        companyTab.addEventListener('click', () => {
+            registerSubmitButton.setAttribute('form', 'registerCompanyForm');
+            registerSubmitButton.innerHTML = '<i class="fas fa-building me-2"></i>Criar Conta';
         });
     }
 }

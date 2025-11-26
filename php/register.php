@@ -1,52 +1,94 @@
 <?php
-require_once "conexao.php";
+session_start();
+require 'db_connect.php';
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+$response = ['success' => false, 'message' => 'Dados inválidos.'];
 
-    $tipo = $_POST["tipo"] ?? "";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $tipo = $_POST['tipo'] ?? null;
 
-    if ($tipo === "fisica") {
-        $nome = $_POST["nome"];
-        $username = $_POST["username"];
-        $email = $_POST["email"];
-        $senha = password_hash($_POST["senha"], PASSWORD_DEFAULT);
-        $endereco = $_POST["endereco"];
+    try {
+        $conn->beginTransaction();
 
-        $sql = "INSERT INTO usuarios (tipo, nome_completo, username, email, senha, endereco)
-                VALUES ('fisica', ?, ?, ?, ?, ?)";
+        if ($tipo === 'fisica') {
+            $nome = $_POST['nome'] ?? null;
+            $username = $_POST['username'] ?? null;
+            $email = $_POST['email'] ?? null;
+            $senha = $_POST['password'] ?? null;
 
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssssss", $nome, $username, $email, $senha, $endereco);
+            if ($nome && $username && $email && $senha) {
+                $stmt = $conn->prepare("SELECT id_usuario FROM usuario WHERE email = :email");
+                $stmt->execute([':email' => $email]);
+                if ($stmt->rowCount() > 0) {
+                    $response['message'] = 'Email já cadastrado.';
+                } else {
+                    $stmt = $conn->prepare("SELECT id_usuario FROM usuario WHERE username = :username");
+                    $stmt->execute([':username' => $username]);
+                    if ($stmt->rowCount() > 0) {
+                        $response['message'] = 'Nome de usuário já cadastrado.';
+                    } else {
+                        $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+                        $stmt = $conn->prepare("INSERT INTO usuario (username, email, senha, tipo_usuario) VALUES (:username, :email, :senha, 'fisica')");
+                        $stmt->execute([':username' => $username, ':email' => $email, ':senha' => $senhaHash]);
+                        $userId = $conn->lastInsertId();
 
-        if ($stmt->execute()) {
-            echo "ok-fisica";
-        } else {
-            echo "erro";
+                        $stmt = $conn->prepare("INSERT INTO cidadao (id_cidadao, nome_completo) VALUES (:id_cidadao, :nome_completo)");
+                        $stmt->execute([':id_cidadao' => $userId, ':nome_completo' => $nome]);
+                        
+                        $conn->commit();
+
+                        $_SESSION['user_id'] = $userId;
+                        $_SESSION['user_name'] = $nome;
+                        $_SESSION['user_type'] = 'fisica';
+
+                        $response = ['success' => true, 'message' => 'Cadastro realizado com sucesso!', 'redirect' => 'assets/View/dashboard.html'];
+                    }
+                }
+            }
+        } elseif ($tipo === 'juridica') {
+            $razaoSocial = $_POST['razao_social'] ?? null;
+            $cnpj = $_POST['cnpj'] ?? null;
+            $email = $_POST['email'] ?? null;
+            $senha = $_POST['password'] ?? null;
+
+            if ($razaoSocial && $cnpj && $email && $senha) {
+                $stmt = $conn->prepare("SELECT id_usuario FROM usuario WHERE email = :email");
+                $stmt->execute([':email' => $email]);
+
+                if ($stmt->rowCount() > 0) {
+                    $response['message'] = 'Email já cadastrado.';
+                } else {
+                    $stmt = $conn->prepare("SELECT id_empresa FROM empresa WHERE cnpj = :cnpj");
+                    $stmt->execute([':cnpj' => $cnpj]);
+                    if ($stmt->rowCount() > 0) {
+                        $response['message'] = 'CNPJ já cadastrado.';
+                    } else {
+                        $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+                        $stmt = $conn->prepare("INSERT INTO usuario (email, senha, tipo_usuario) VALUES (:email, :senha, 'juridica')");
+                        $stmt->execute([':email' => $email, ':senha' => $senhaHash]);
+                        $userId = $conn->lastInsertId();
+
+                        $stmt = $conn->prepare("INSERT INTO empresa (id_empresa, razao_social, cnpj) VALUES (:id_empresa, :razao_social, :cnpj)");
+                        $stmt->execute([':id_empresa' => $userId, ':razao_social' => $razaoSocial, ':cnpj' => $cnpj]);
+
+                        $conn->commit();
+
+                        $_SESSION['user_id'] = $userId;
+                        $_SESSION['user_name'] = $razaoSocial;
+                        $_SESSION['user_type'] = 'juridica';
+
+                        $response = ['success' => true, 'message' => 'Cadastro realizado com sucesso!', 'redirect' => 'assets/View/dashboard.html'];
+                    }
+                }
+            }
         }
-
-        $stmt->close();
-    }
-
-    if ($tipo === "juridica") {
-        $razao = $_POST["razao_social"];
-        $cnpj = $_POST["cnpj"];
-        $email = $_POST["email"];
-        $senha = password_hash($_POST["senha"], PASSWORD_DEFAULT);
-        $endereco = $_POST["endereco"];
-
-        $sql = "INSERT INTO usuarios (tipo, razao_social, cnpj, email, senha, endereco)
-                VALUES ('juridica', ?, ?, ?, ?, ?)";
-
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssss", $razao, $cnpj, $email, $senha, $endereco);
-
-        if ($stmt->execute()) {
-            echo "ok-juridica";
-        } else {
-            echo "erro";
-        }
-
-        $stmt->close();
+    } catch (PDOException $e) {
+        $conn->rollBack();
+        $response['message'] = 'Erro no cadastro: ' . $e->getMessage();
     }
 }
+
+echo json_encode($response);
+
+$conn = null;
 ?>

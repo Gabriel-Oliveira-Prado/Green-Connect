@@ -838,9 +838,9 @@
                 <hr class="flex-grow-1" />
               </div>
               <div class="d-grid gap-2">
-                <a
-                  href="#"
+                <button
                   class="btn btn-light border d-flex align-items-center justify-content-center btn-google"
+                  disabled
                 >
                   <svg
                     class="me-2"
@@ -876,10 +876,10 @@
                     ></path>
                   </svg>
                   Entrar com Google
-                </a>
-                <a
-                  href="#"
+                </button>
+                <button
                   class="btn btn-primary d-flex align-items-center justify-content-center btn-facebook"
+                  disabled
                 >
                   <svg
                     class="me-2"
@@ -895,7 +895,7 @@
                     ></path>
                   </svg>
                   Entrar com Facebook
-                </a>
+                </button>
               </div>
               <p class="text-center text-muted small mt-3">
                 Não tem uma conta?
@@ -1074,6 +1074,7 @@
               </div>
               <button
                 type="submit"
+                id="registerSubmitButton"
                 form="registerUserForm"
                 class="btn btn-success w-100 fw-bold"
               >
